@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+
+	<body>
+
+		<div>
+
+			This is a very simple game that shows your speed typing a text in characters per minute (CPM) and also words per minute (WPM).<br><br>
+
+			It counts every error but you can use the backspace key!
+			<br><br>
+
+			Click on <input id="btnVerEjercicio" type="button" value="Ver Ejercicio"> when you are ready to see the exercise.<br><br>
+
+		</div>
+
+		<script type="text/javascript">
+
+			var ventanaNueva;
+
+			function popupwindow (url, title, w, h) {
+				var left = (screen.width / 2) - (w / 2);
+				var top = (screen.height / 2) - (h / 2);
+				return window.open(url, title, 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=no, copyhistory=no, width=' + w + ', height=' + h + ', top=' + top + ', left=' + left);
+			};
+
+			$("#btnVerEjercicio").click(function () {
+				ventanaNueva = popupwindow('exercise.html', 'Ejercicio de Dactilografía', 800, 600);
+			});
+
+		</script>
+
+	</body>
+</html>
